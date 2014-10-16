@@ -40,10 +40,9 @@ input device (e.g., ``alsasrc``, ``pulsesrc``) that allows a user's voice to be 
 processed digitally for voice control purposes.
 
 The voice recognition engine is built using a GStreamer pipeline which operates two separate recognition
-engines in parallel::
+engines in parallel:
 
 - PocketSphinx Engine: this is used for simple commands only that can be resolved quickly without any additional external search operations.  For example, track navigation functions such as pause, resume, stop, play, etc.
-
 - Google Speech To Text Engine: this is used for more complex utterances requiring the power of Google's search engine which can use probabilistic inference to improve accuracy of search terms.  This is especially useful when referring to album, track or artist names.
 
 Both engines run in parallel continuously aided by a VAD (Voice Activity Detector) which filters based
@@ -164,7 +163,7 @@ provides a sound source.
 
 For all search based commands, the search result limit is applied as defined in ``max_search_results``.
 
-The use of the PocketSphinx Voice Recognition engine is optional and can be set using ``use_pocketsphinx`.
+The use of the PocketSphinx Voice Recognition engine is optional and can be set using ``use_pocketsphinx``.
 If ``use_pocketsphinx`` is enabled, then it is necessary to have the correct install path and recognition
 model defined via ``model_dir`` and ``model_name``.
 
