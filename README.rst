@@ -42,14 +42,9 @@ processed digitally for voice control purposes.
 The voice recognition engine is built using a GStreamer pipeline which operates two separate recognition
 engines in parallel::
 
-- PocketSphinx Engine - this is used for simple commands only that can be resolved quickly without
-	any additional external search operations.  For example, track navigation functions such as
-	pause, resume, stop, play, etc.
+- PocketSphinx Engine: this is used for simple commands only that can be resolved quickly without any additional external search operations.  For example, track navigation functions such as pause, resume, stop, play, etc.
 
-- Google Speech To Text Engine - this is used for more complex utterances requiring the power of
-	Google's search engine which can use probabilistic inference to improve accuracy of search
-	terms.  This is especially useful when referring to album, track or artist names.
-
+- Google Speech To Text Engine: this is used for more complex utterances requiring the power of Google's search engine which can use probabilistic inference to improve accuracy of search terms.  This is especially useful when referring to album, track or artist names.
 
 Both engines run in parallel continuously aided by a VAD (Voice Activity Detector) which filters based
 on a signal-to-noise threshold.
@@ -76,9 +71,7 @@ The following commands may be spoken stand alone to perform the stated function:
 - mute, unmute: mute or unmute the volume
 - louder, quieter: increase or decrease the volume level by some amount
 
-(*) Audio announcements are not supported by this extension.  An internal event is
-	raised by this command which may be acted upon by another extension for performing
-	audio announcements.
+(*) Audio announcements are not supported by this extension.  An internal event is raised by this command which may be acted upon by another extension for performing audio announcements.
 
 Commands taking a single parameter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -100,8 +93,7 @@ The allowed keywords are:
 
 - insert: executes the search and inserts the results to the beginning of the current tracklist
 - append, search, find: executes the search and appends the results to the end of the current tracklist
-- play: executes the search and appends the results to the end of the current tracklist and skips playback to the first
-	new track found
+- play: executes the search and appends the results to the end of the current tracklist and skips playback to the first new track found
 
 Any of the above keywords may be used in conjunction with one of the following search terms:
 
